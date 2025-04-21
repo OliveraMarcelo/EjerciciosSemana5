@@ -1,0 +1,14 @@
+/home/marceloo/ifts/EjerciciosClase5/bin/Debug/net8.0/EjerciciosClase5
+/home/marceloo/ifts/EjerciciosClase5/bin/Debug/net8.0/EjerciciosClase5.deps.json
+/home/marceloo/ifts/EjerciciosClase5/bin/Debug/net8.0/EjerciciosClase5.runtimeconfig.json
+/home/marceloo/ifts/EjerciciosClase5/bin/Debug/net8.0/EjerciciosClase5.dll
+/home/marceloo/ifts/EjerciciosClase5/bin/Debug/net8.0/EjerciciosClase5.pdb
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/EjerciciosClase5.GeneratedMSBuildEditorConfig.editorconfig
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/EjerciciosClase5.AssemblyInfoInputs.cache
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/EjerciciosClase5.AssemblyInfo.cs
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/EjerciciosClase5.csproj.CoreCompileInputs.cache
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/EjerciciosClase5.dll
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/refint/EjerciciosClase5.dll
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/EjerciciosClase5.pdb
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/EjerciciosClase5.genruntimeconfig.cache
+/home/marceloo/ifts/EjerciciosClase5/obj/Debug/net8.0/ref/EjerciciosClase5.dll

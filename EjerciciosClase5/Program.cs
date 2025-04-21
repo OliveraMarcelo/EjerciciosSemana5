@@ -1,11 +1,4 @@
-﻿/*
-EJERCICIO 1 - CLASES Y OBJETOS
- 1) El supermercado “Eureka” posee un problema al vender productos que no se descuenta del stock
-existente.
-Se requiere realizar el modelado de las clases del stock de un supermercado, donde se detalle la
-clase Producto con sus dos clases hijas: Bebida y Alimento, que posean un método que haga
-referencia a la venta de un producto y descuente la cantidad vendida del stock existente.
- */
+
 using System;
 
 namespace Sample
@@ -15,16 +8,68 @@ namespace Sample
         public static void Main(string[] args)
         {
             //EJERCICIO 1
-            //mostrarDatosDeProducto();
+            mostrarDatosDeProducto();
             //EJERCICIO 2
-            //mostrarDatosDeTriangulo();
-            //mostrarDatosDeCirculo();
+            mostrarDatosDeTriangulo();
+            mostrarDatosDeCirculo();
             //EJERCICIO 3
-            //probarCuentaMayor();
-            //probarCuentaMenor();
-            //probarCuentaEstudiante();
+            probarCuentaMayor();
+            probarCuentaMenor();
+            probarCuentaEstudiante();
             //EJERCICIO 4
+            Programador developer = new Programador("Marcelo", "Olivera", "1134323271", "olivera@gmail.com", 43814725, 1000, "Flutter", "JR+", 2, 0, false, true, "Desarrollo");
+            developer.mostrarInfo();
+            //EJERCICIO 5
+            Ambiente ambiente1 = new Ambiente("Desarrollo", "linux", 4, "postgresql", "appjdk");
+            Ambiente ambiente2 = new Ambiente("Desarrollo", "linux", 2, "postgresql", "appjdk");
+            ambiente1.verificarDespliege();
+            ambiente2.verificarDespliege();
+            //EJERCICIO 6
+            Persona persona1 = new Persona("Marcelo", 30);
+            Persona persona2 = new Persona("Jhuly", 22);
+            persona1.mostrarDatos();
+            persona2.compararEdad(persona1.edad);
+            persona2.mostrarDatos();
+            //EJERCICIO 7
+            Tren tren = new Tren(0);
+            Vagon vagon = new Vagon(0, 250);
+            tren.acelerar(100);
+            tren.mostrarVelocidad();
+            tren.frenar();
+            tren.mostrarVelocidad();
+            vagon.agregarCapacidad(100);
+            vagon.vagonLleno();
+            vagon.quitarCapacidad(350);
+            vagon.vagonLleno();
+           /*  ElegirEjercicio(); */
         }
+        /* public static void ElegirEjercicio(){
+            Console.WriteLine("Elija el ejercicio a probar: ");
+            Console.WriteLine("1) Producto");
+            Console.WriteLine("2) Figura");
+            Console.WriteLine("3) Cuenta");
+            Console.WriteLine("4) Empleado");
+            Console.WriteLine("5) Ambiente");
+            Console.WriteLine("6) Persona");
+            Console.WriteLine("7) Tren y Vagon");
+            Console.WriteLine("0) Salir");
+            switch(Console.ReadLine())
+            {
+                case "1":
+                    mostrarDatosDeProducto();
+                    break;
+                case "2":
+                    mostrarDatosDeTriangulo();
+                    mostrarDatosDeCirculo();
+                    break;
+                case "3":
+                    probarCuentaMayor();
+                    probarCuentaMenor();
+                    probarCuentaEstudiante();
+                    break;
+                
+        }
+        } */
         public static void probarCuentaMayor()
         {
             CuentaMayor cuentaMayor = new CuentaMayor(123456, "Jhuly Lopez", 22, 1000);
@@ -81,6 +126,13 @@ namespace Sample
             circulo.mostrarArea();
         }
     }
+    /*
+    1) El supermercado “Eureka” posee un problema al vender productos que no se descuenta del stock
+    existente.
+    Se requiere realizar el modelado de las clases del stock de un supermercado, donde se detalle la
+    clase Producto con sus dos clases hijas: Bebida y Alimento, que posean un método que haga
+    referencia a la venta de un producto y descuente la cantidad vendida del stock existente.
+    */
     public class Producto
     {
         public int id;
@@ -151,7 +203,6 @@ namespace Sample
             {
                 Console.WriteLine("El area es nulo, pruebe de nuevo cargando area");
             }
-
         }
     }
     public class Circulo : Figura
@@ -406,15 +457,15 @@ public class Persona
     {
         if (this.edad == edad)
         {
-            Console.WriteLine($"La edad de {this.nombre} es igual a: " + this.edad);
+            Console.WriteLine($"La edad de {this.nombre} es igual a: " + this.edad + " a la edad de: " + edad);
         }
         else if (this.edad > edad)
         {
-            Console.WriteLine($"La edad de {this.nombre} es mayor a: " + this.edad);
+            Console.WriteLine($"La edad de {this.nombre} es mayor a: " + this.edad + " a la edad de: " + edad);
         }
         else
         {
-            Console.WriteLine($"La edad de {this.nombre} es menor a: " + this.edad);
+            Console.WriteLine($"La edad de {this.nombre} es menor a: " + this.edad + " a la edad de: " + edad);
         }
     }
 }
@@ -422,37 +473,50 @@ public class Persona
 7) Definir la clase Tren y su hija, Vagón. Se deben crear los métodos vagonLleno, ascelerar(int
 velocidad) y frenar.
  */
-public class Tren{
+public class Tren
+{
     public double velocidad = 0;
-    public Tren(int velocidad){
+    public Tren(int velocidad)
+    {
         this.velocidad = velocidad;
     }
-    public void acelerar(int velocidad){
+    public void acelerar(int velocidad)
+    {
         this.velocidad = velocidad;
     }
-    public void frenar(){
+    public void frenar()
+    {
         this.velocidad = 0;
     }
-    public void mostrarVelocidad(){
+    public void mostrarVelocidad()
+    {
         Console.WriteLine("La velocidad del tren es: " + this.velocidad);
     }
 }
-public class Vagon : Tren{
+public class Vagon : Tren
+{
     public int capacidad = 250;
-    public Vagon(int velocidad, int capacidad) : base(velocidad){
+    public Vagon(int velocidad, int capacidad) : base(velocidad)
+    {
         this.capacidad = capacidad;
     }
-    public void vagonLleno(){
-        if (this.capacidad == 0){
+    public void vagonLleno()
+    {
+        if (this.capacidad == 0)
+        {
             Console.WriteLine("El vagon esta lleno");
-        }else{
+        }
+        else
+        {
             Console.WriteLine("El vagon no esta lleno");
         }
     }
-    public void agregarCapacidad(int capacidad){
+    public void agregarCapacidad(int capacidad)
+    {
         this.capacidad = this.capacidad + capacidad;
     }
-    public void quitarCapacidad(int capacidad){
+    public void quitarCapacidad(int capacidad)
+    {
         this.capacidad = this.capacidad - capacidad;
     }
 }
